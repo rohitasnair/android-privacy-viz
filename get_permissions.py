@@ -1,0 +1,1 @@
+# Module to extract permissions list
