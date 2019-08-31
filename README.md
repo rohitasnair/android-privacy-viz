@@ -1,3 +1,3 @@
 # Android-Privacy-Viz 
 
-Visual Analysis of privacy concerns in Android applications.
+Android Visual Analysis of privacy concerns in Android applications.
