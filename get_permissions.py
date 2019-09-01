@@ -12,7 +12,7 @@ while True:
     str_count = str(count)
 
     try:
-        with open('data/TRACK_' + str_count + '.html') as html_file:
+        with open('str_count + '.html') as html_file:
             soup = BeautifulSoup(html_file, 'lxml')
 
             try:
