@@ -1,0 +1,751 @@
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/exodus.css">
+
+    <script src="/static/js/jquery-3.2.1.min.js" ></script>
+    <script src="/static/js/popper.min.js" ></script>
+    <script src="/static/js/bootstrap.min.js" ></script>
+    <script src="/static/js/handlebars.min-latest.js" ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>εxodus</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="/en/">
+        <img src="/static/img/logo_purple.svg" width="40" height="40" class="d-inline-block align-top">
+        <span class="h2">εxodus</span> <span class="small text-muted">v1.3</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        
+        
+        
+        
+        
+        
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/reports/">Reports</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/reports/apps/">Applications</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/trackers/">Trackers</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/trackers/stats/">Statistics</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/analysis/submit/">New analysis</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="EPDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Exodus Privacy
+            </a>
+            <div class="dropdown-menu" aria-labelledby="EPDropdown">
+              <a class="dropdown-item" target="_blank" href="https://exodus-privacy.eu.org/en">Website</a>
+              <a class="dropdown-item" target="_blank" href="https://exodus-privacy.eu.org/en/page/contribute/">Help us!</a>
+              <a class="dropdown-item" target="_blank" href="https://github.com/Exodus-Privacy/exodus/issues">Report an issue</a>
+            </div>
+          </li>
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="/i18n/setlang/" method="post">
+          <input type='hidden' name='csrfmiddlewaretoken' value='HZnHoN1Q29V5ReZ1hGhitG94v0TnQUn2UbdXz0vZkcSxGXeu0bvjtDK7p5STgLft' />
+          <input name="next" type="hidden" value="">
+          <select class="custom-select custom-select-sm" name="language" onchange='if(this.value !=  "en") { this.form.submit(); }'>
+            
+            
+            
+            
+              <option value="fr" >
+                fr
+              </option>
+            
+              <option value="en" selected>
+                en
+              </option>
+            
+          </select>
+        </form>
+
+      </div>
+    </nav>
+
+    <br>
+
+    <div class="container-fluid">
+      
+
+
+
+
+    
+    <div class="alert bg-light" role="alert">
+        <div class="row">
+            <div class="col col-md-2 cold-sm-3">
+                
+                    <div class="alert alert-warning text-center">
+                
+                    <p class="h1"><b>2</b></p>
+                    <h6>trackers</h6>
+                </div>
+                
+                    <div class="alert alert-danger text-center">
+                
+                    <p class="h1"><b>24</b></p>
+                    <h6>permissions</h6>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="alert-heading">
+                    
+                        <h2><img src="/reports/10781/icon" class="rounded" width="60px" alt=""> <b>Greenify</b></h2>
+                    
+
+                    <ul class="list-unstyled">
+                        
+                            <li>Version: <b>3.9.9.1</b></li>
+                        
+                        
+                            <li>Creator: <b>Oasis Feng</b></li>
+                        
+                        
+                            <li>Downloads: <b>10,000,000+ downloads</b></li>
+                        
+                    </ul>
+                    <a class="btn btn-secondary btn-sm" href="/reports/search/com.oasisfeng.greenify">Other versions</a>
+                    <a class="btn btn-secondary btn-sm" target="_blank" href="https://play.google.com/store/apps/details?id=com.oasisfeng.greenify">On Google Play</a>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary btn-sm dropdown-toggle"  type="button" id="dropdownApkFingerprint" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">APK fingerprint</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownApkFingerprint">
+                            <a class="dropdown-item" data-toggle="modal" href="#collapseAPKDetails" aria-expanded="false" aria-controls="collapseAPKDetails">Text</a>
+                            <a class="dropdown-item" data-toggle="modal" href="#collapseAPKDetailsJSON" aria-expanded="false" aria-controls="collapseAPKDetailsJSON">JSON</a>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="collapseAPKDetails" tabindex="-1" role="dialog" aria-labelledby="collapseAPKDetails" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">APK fingerprint</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="list-unstyled">
+                                        <li><b>APK checksum:</b> <samp>c1fa3b6dea8046be77223d05508c2b11fbdf76a930e6662b245e808109ff919b</samp></li>
+                                        <li><b>Handle:</b> <samp>com.oasisfeng.greenify</samp></li>
+                                        <li><b>Name:</b> <samp>Greenify</samp></li>
+                                        <li><b>UAID:</b> <samp>70A27438495529C57F11A230A2303971518E2936</samp></li>
+                                        <li><b>Version:</b> <samp>3.9.9.1</samp></li>
+                                        <li><b>Version code:</b> <samp>39910</samp></li>
+                                        <li><b>Icon hash:</b> <samp>1185890053391447827224112725810479424</samp></li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="collapseAPKDetailsJSON" tabindex="-1" role="dialog" aria-labelledby="collapseAPKDetailsJSON" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">APK fingerprint</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <pre><code>{
+  &quot;version_code&quot;: &quot;39910&quot;,
+  &quot;version&quot;: &quot;3.9.9.1&quot;,
+  &quot;sha256sum&quot;: &quot;c1fa3b6dea8046be77223d05508c2b11fbdf76a930e6662b245e808109ff919b&quot;,
+  &quot;handle&quot;: &quot;com.oasisfeng.greenify&quot;,
+  &quot;icon_hash&quot;: &quot;1185890053391447827224112725810479424&quot;,
+  &quot;name&quot;: &quot;Greenify&quot;,
+  &quot;uaid&quot;: &quot;70A27438495529C57F11A230A2303971518E2936&quot;
+}</code></pre>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p></p>
+                <p class="text-muted small">
+                    This report was automatically issued on <b>June 10, 2018, 5:42 a.m.</b>.<br>
+                    This report was automatically updated on <b>Aug. 20, 2019, 7:42 p.m.</b>.
+                </p>
+
+            </div>
+
+            <div class="col">
+                <div class="alert-heading">
+                    <h4>
+                        🔏 Signed by:
+                    </h4>
+                </div>
+                
+                    <ul class="list-unstyled">
+                        
+                            <li><b>Fingerprint:</b> <code>6bdbe6cee181b0f31f87610daccc8ab77f8ad403</code></li>
+                            <li><b>Issuer:</b> <samp>commonName=Oasis Feng</samp></li>
+                            <li><b>Subject:</b> <samp>commonName=Oasis Feng</samp></li>
+                            <li><b>Serial:</b> <samp>1353486623</samp></li>
+                        
+                    </ul>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-3">
+            <div class="card bg-light">
+                <div class="card-header">
+                    <h4 class=""><span class="badge badge-secondary">2</span> Trackers</h4>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        We have found <b>code signature</b> of the following trackers in the application:
+                        
+                        <br>
+                        <br>
+                        <ul>
+                            
+                                <li><a href="/en/trackers/27/"><samp>Google CrashLytics</samp></a></li>
+                            
+                                <li><a href="/en/trackers/49/"><samp>Google Firebase Analytics</samp></a></li>
+                            
+                        </ul>
+                        <p  class="small alert">
+                            <i>A tracker is a piece of software meant to collect data about you or your usages. We do not guarantee the exhaustiveness of this list.</i>
+                        </p>
+                        <p class="alert alert-warning small">
+                            Here is the list of trackers signatures found by static analysis in this APK. This is not a proof of activity of these trackers.
+                            The application could contain tracker(s) we do not know yet.
+                            <br>
+                            If you have doubts about this report, contact us at
+                            <a href="mailto:contact@exodus-privacy.eu.org?subject=Exodus - Question about report 10782">contact@exodus-privacy.eu.org</a>.
+                        </p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-light">
+                <div class="card-header">
+                    <h4 class=""><span class="badge badge-secondary">24</span> Permissions </h4>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        We have found the following permissions in the application:
+                        
+
+                        
+                            (
+                            
+                                2 <span class="badge badge-danger">Special</span>
+                            
+                            
+                            )
+                        
+                        <br>
+                        <br>
+			<div class="table-responsive">
+                        <table class="table table-sm">
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to view
+      information about network connections such as which networks exist and are
+      connected.">ACCESS_NETWORK_STATE (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>view network connections</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal|instant">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to disable the
+      keylock and any associated password security.  For example, the phone
+      disables the keylock when receiving an incoming phone call, then
+      re-enables the keylock when the call is finished.">DISABLE_KEYGUARD (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>disable your screen lock</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">DUMP (android.permission)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: signature|privileged|development">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to expand or collapse the status bar.">EXPAND_STATUS_BAR (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>expand/collapse status bar</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">FORCE_STOP_PACKAGES (android.permission)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: signature|privileged">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">GET_APP_OPS_STATS (android.permission)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: signature|privileged|development">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to retrieve information
+       about currently and recently running tasks.  This may allow the app to
+       discover information about which applications are used on the device.">GET_TASKS (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>retrieve running apps</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">INTERACT_ACROSS_USERS (android.permission)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: signature|privileged|development">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to create
+     network sockets and use custom network protocols. The browser and other
+     applications provide means to send data to the internet, so this
+     permission is not required to send data to the internet.">INTERNET (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>have full network access</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal|instant">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">PACKAGE_USAGE_STATS (android.permission)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: signature|privileged|development|appop">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">READ_LOGS (android.permission)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: signature|privileged|development">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to read the sync settings for an account. For example, this can determine whether the People app is synced with an account.">READ_SYNC_SETTINGS (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>read sync settings</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows an app to read the sync stats for an account, including the history of sync events and how much data is synced. ">READ_SYNC_STATS (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>read sync statistics</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to
+        have itself started as soon as the system has finished booting.
+        This can make it take longer to start the phone and allow the
+        app to slow down the overall phone by always running.">RECEIVE_BOOT_COMPLETED (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>run at startup</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="This app can appear on top of other apps or other parts of the screen. This may interfere with normal app usage and change the way that other apps appear.">SYSTEM_ALERT_WINDOW (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>This app can appear on top of other apps</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-danger" data-toggle="tooltip" data-placement="top" title="Protection level: signature|preinstalled|appop|pre23|development">Special</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">UPDATE_CONFIG (android.permission)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: signature|privileged">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to prevent the phone from going to sleep.">WAKE_LOCK (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>prevent phone from sleeping</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal|instant">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">WRITE_SECURE_SETTINGS (android.permission)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: signature|privileged|development">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to modify the
+        system&#39;s settings data. Malicious apps may corrupt your system&#39;s
+        configuration.">WRITE_SETTINGS (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>modify system settings</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-danger" data-toggle="tooltip" data-placement="top" title="Protection level: signature|preinstalled|appop|pre23">Special</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows an app to modify the sync settings for an account.  For example, this can be used to enable sync of the People app with an account.">WRITE_SYNC_SETTINGS (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>toggle sync on and off</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows an application to add
+        Homescreen shortcuts without user intervention.">INSTALL_SHORTCUT (com.android.launcher.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>install shortcuts</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">RECEIVE (com.google.android.c2dm.permission)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: Unknown">Unknown</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">INTERNAL (com.oasisfeng.greenify)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: Unknown">Unknown</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">C2D_MESSAGE (com.oasisfeng.greenify.permission)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: Unknown">Unknown</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </table>
+			</div>
+                        <i class="small">
+                            Permissions are actions the application can do on your phone. The severity levels are defined according to 
+                            <a href="https://developer.android.com/guide/topics/permissions/overview">Google's protection levels</a>.
+                        </i>
+                    
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+    
+    
+  </body>
+</html>

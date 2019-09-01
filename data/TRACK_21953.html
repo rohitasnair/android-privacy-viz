@@ -1,0 +1,108 @@
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/exodus.css">
+
+    <script src="/static/js/jquery-3.2.1.min.js" ></script>
+    <script src="/static/js/popper.min.js" ></script>
+    <script src="/static/js/bootstrap.min.js" ></script>
+    <script src="/static/js/handlebars.min-latest.js" ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>εxodus</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="/en/">
+        <img src="/static/img/logo_purple.svg" width="40" height="40" class="d-inline-block align-top">
+        <span class="h2">εxodus</span> <span class="small text-muted">v1.3</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        
+        
+        
+        
+        
+        
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/reports/">Reports</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/reports/apps/">Applications</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/trackers/">Trackers</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/trackers/stats/">Statistics</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/analysis/submit/">New analysis</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="EPDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Exodus Privacy
+            </a>
+            <div class="dropdown-menu" aria-labelledby="EPDropdown">
+              <a class="dropdown-item" target="_blank" href="https://exodus-privacy.eu.org/en">Website</a>
+              <a class="dropdown-item" target="_blank" href="https://exodus-privacy.eu.org/en/page/contribute/">Help us!</a>
+              <a class="dropdown-item" target="_blank" href="https://github.com/Exodus-Privacy/exodus/issues">Report an issue</a>
+            </div>
+          </li>
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="/i18n/setlang/" method="post">
+          <input type='hidden' name='csrfmiddlewaretoken' value='obQ6sys3aagl4Ak8jZmtmpnkO47nFsKXew1DaxXtqtCmQblpsEBeYLrZEf2wfy7Y' />
+          <input name="next" type="hidden" value="">
+          <select class="custom-select custom-select-sm" name="language" onchange='if(this.value !=  "en") { this.form.submit(); }'>
+            
+            
+            
+            
+              <option value="fr" >
+                fr
+              </option>
+            
+              <option value="en" selected>
+                en
+              </option>
+            
+          </select>
+        </form>
+
+      </div>
+    </nav>
+
+    <br>
+
+    <div class="container-fluid">
+      
+
+<div class="row justify-content-md-center">
+    <div class="col-lg-3 col-centered">
+        <div class=" alert alert-danger text-center">
+        Are you lost?
+        </div>
+    </div>
+</div>
+
+    </div>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+    
+    
+  </body>
+</html>

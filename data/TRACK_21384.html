@@ -1,0 +1,351 @@
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/exodus.css">
+
+    <script src="/static/js/jquery-3.2.1.min.js" ></script>
+    <script src="/static/js/popper.min.js" ></script>
+    <script src="/static/js/bootstrap.min.js" ></script>
+    <script src="/static/js/handlebars.min-latest.js" ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>εxodus</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="/en/">
+        <img src="/static/img/logo_purple.svg" width="40" height="40" class="d-inline-block align-top">
+        <span class="h2">εxodus</span> <span class="small text-muted">v1.3</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        
+        
+        
+        
+        
+        
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/reports/">Reports</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/reports/apps/">Applications</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/trackers/">Trackers</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/trackers/stats/">Statistics</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/analysis/submit/">New analysis</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="EPDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Exodus Privacy
+            </a>
+            <div class="dropdown-menu" aria-labelledby="EPDropdown">
+              <a class="dropdown-item" target="_blank" href="https://exodus-privacy.eu.org/en">Website</a>
+              <a class="dropdown-item" target="_blank" href="https://exodus-privacy.eu.org/en/page/contribute/">Help us!</a>
+              <a class="dropdown-item" target="_blank" href="https://github.com/Exodus-Privacy/exodus/issues">Report an issue</a>
+            </div>
+          </li>
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="/i18n/setlang/" method="post">
+          <input type='hidden' name='csrfmiddlewaretoken' value='vhXaATedWHngJPy0jYlzviZLJ4jTqeJE8KARIGjzSZYWaFEWEefVcQYpAAFPNKaY' />
+          <input name="next" type="hidden" value="">
+          <select class="custom-select custom-select-sm" name="language" onchange='if(this.value !=  "en") { this.form.submit(); }'>
+            
+            
+            
+            
+              <option value="fr" >
+                fr
+              </option>
+            
+              <option value="en" selected>
+                en
+              </option>
+            
+          </select>
+        </form>
+
+      </div>
+    </nav>
+
+    <br>
+
+    <div class="container-fluid">
+      
+
+
+
+
+    
+    <div class="alert bg-light" role="alert">
+        <div class="row">
+            <div class="col col-md-2 cold-sm-3">
+                
+                    <div class="alert alert-success text-center">
+                
+                    <p class="h1"><b>0</b></p>
+                    <h6>trackers</h6>
+                </div>
+                
+                    <div class="alert alert-warning text-center">
+                
+                    <p class="h1"><b>4</b></p>
+                    <h6>permissions</h6>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="alert-heading">
+                    
+                        <h2><img src="/reports/21383/icon" class="rounded" width="60px" alt=""> <b>Sunshine - Simple Weather App</b></h2>
+                    
+
+                    <ul class="list-unstyled">
+                        
+                            <li>Version: <b>1.0</b></li>
+                        
+                        
+                            <li>Creator: <b>TICG13</b></li>
+                        
+                        
+                            <li>Downloads: <b>50+ downloads</b></li>
+                        
+                    </ul>
+                    <a class="btn btn-secondary btn-sm" href="/reports/search/com.jackyef.sunshine.app">Other versions</a>
+                    <a class="btn btn-secondary btn-sm" target="_blank" href="https://play.google.com/store/apps/details?id=com.jackyef.sunshine.app">On Google Play</a>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary btn-sm dropdown-toggle"  type="button" id="dropdownApkFingerprint" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">APK fingerprint</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownApkFingerprint">
+                            <a class="dropdown-item" data-toggle="modal" href="#collapseAPKDetails" aria-expanded="false" aria-controls="collapseAPKDetails">Text</a>
+                            <a class="dropdown-item" data-toggle="modal" href="#collapseAPKDetailsJSON" aria-expanded="false" aria-controls="collapseAPKDetailsJSON">JSON</a>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="collapseAPKDetails" tabindex="-1" role="dialog" aria-labelledby="collapseAPKDetails" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">APK fingerprint</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="list-unstyled">
+                                        <li><b>APK checksum:</b> <samp>fe7d8508a1971adf5157e656e948a3343aabd40915a717f3963398f488327f9e</samp></li>
+                                        <li><b>Handle:</b> <samp>com.jackyef.sunshine.app</samp></li>
+                                        <li><b>Name:</b> <samp>Sunshine - Simple Weather App</samp></li>
+                                        <li><b>UAID:</b> <samp>F3E7E50788E8B27E25D6BB4A2A05BFDBFE71E142</samp></li>
+                                        <li><b>Version:</b> <samp>1.0</samp></li>
+                                        <li><b>Version code:</b> <samp>1</samp></li>
+                                        <li><b>Icon hash:</b> <samp>151453798776486312256477689457966317696</samp></li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="collapseAPKDetailsJSON" tabindex="-1" role="dialog" aria-labelledby="collapseAPKDetailsJSON" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">APK fingerprint</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <pre><code>{
+  &quot;version_code&quot;: &quot;1&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;sha256sum&quot;: &quot;fe7d8508a1971adf5157e656e948a3343aabd40915a717f3963398f488327f9e&quot;,
+  &quot;handle&quot;: &quot;com.jackyef.sunshine.app&quot;,
+  &quot;icon_hash&quot;: &quot;151453798776486312256477689457966317696&quot;,
+  &quot;name&quot;: &quot;Sunshine - Simple Weather App&quot;,
+  &quot;uaid&quot;: &quot;F3E7E50788E8B27E25D6BB4A2A05BFDBFE71E142&quot;
+}</code></pre>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p></p>
+                <p class="text-muted small">
+                    This report was automatically issued on <b>Aug. 15, 2018, 9:07 a.m.</b>.<br>
+                    This report was automatically updated on <b>Aug. 20, 2019, 6:41 p.m.</b>.
+                </p>
+
+            </div>
+
+            <div class="col">
+                <div class="alert-heading">
+                    <h4>
+                        🔏 Signed by:
+                    </h4>
+                </div>
+                
+                    <ul class="list-unstyled">
+                        
+                            <li><b>Fingerprint:</b> <code>5fc0f806f57344e783a83ff22e5b1d6e3394d86f</code></li>
+                            <li><b>Issuer:</b> <samp>countryName=62, stateOrProvinceName=Riau, localityName=Pekanbaru, organizationalUnitName=Person, commonName=Jacky Efendi</samp></li>
+                            <li><b>Subject:</b> <samp>countryName=62, stateOrProvinceName=Riau, localityName=Pekanbaru, organizationalUnitName=Person, commonName=Jacky Efendi</samp></li>
+                            <li><b>Serial:</b> <samp>268205812</samp></li>
+                        
+                    </ul>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-3">
+            <div class="card bg-light">
+                <div class="card-header">
+                    <h4 class=""><span class="badge badge-secondary">0</span> Trackers</h4>
+                </div>
+                <div class="card-body">
+                    
+                    We have not found <b>code signature</b> of any tracker we know in the application.
+                    The application could contain tracker(s) we do not know yet.
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-light">
+                <div class="card-header">
+                    <h4 class=""><span class="badge badge-secondary">4</span> Permissions </h4>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        We have found the following permissions in the application:
+                        
+
+                        
+                        <br>
+                        <br>
+			<div class="table-responsive">
+                        <table class="table table-sm">
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">AUTHENTICATE_ACCOUNTS (android.permission)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to create
+     network sockets and use custom network protocols. The browser and other
+     applications provide means to send data to the internet, so this
+     permission is not required to send data to the internet.">INTERNET (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>have full network access</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal|instant">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to read the sync settings for an account. For example, this can determine whether the People app is synced with an account.">READ_SYNC_SETTINGS (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>read sync settings</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows an app to modify the sync settings for an account.  For example, this can be used to enable sync of the People app with an account.">WRITE_SYNC_SETTINGS (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>toggle sync on and off</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </table>
+			</div>
+                        <i class="small">
+                            Permissions are actions the application can do on your phone. The severity levels are defined according to 
+                            <a href="https://developer.android.com/guide/topics/permissions/overview">Google's protection levels</a>.
+                        </i>
+                    
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+    
+    
+  </body>
+</html>

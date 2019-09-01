@@ -1,0 +1,390 @@
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/exodus.css">
+
+    <script src="/static/js/jquery-3.2.1.min.js" ></script>
+    <script src="/static/js/popper.min.js" ></script>
+    <script src="/static/js/bootstrap.min.js" ></script>
+    <script src="/static/js/handlebars.min-latest.js" ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>εxodus</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="/en/">
+        <img src="/static/img/logo_purple.svg" width="40" height="40" class="d-inline-block align-top">
+        <span class="h2">εxodus</span> <span class="small text-muted">v1.3</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        
+        
+        
+        
+        
+        
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/reports/">Reports</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/reports/apps/">Applications</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/trackers/">Trackers</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/trackers/stats/">Statistics</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/en/analysis/submit/">New analysis</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="EPDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Exodus Privacy
+            </a>
+            <div class="dropdown-menu" aria-labelledby="EPDropdown">
+              <a class="dropdown-item" target="_blank" href="https://exodus-privacy.eu.org/en">Website</a>
+              <a class="dropdown-item" target="_blank" href="https://exodus-privacy.eu.org/en/page/contribute/">Help us!</a>
+              <a class="dropdown-item" target="_blank" href="https://github.com/Exodus-Privacy/exodus/issues">Report an issue</a>
+            </div>
+          </li>
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="/i18n/setlang/" method="post">
+          <input type='hidden' name='csrfmiddlewaretoken' value='Du4IEPako188l8Myd29Af7WRGa87xlEO5372z7aBSNuevYd0jIP5ou0CgCmurICO' />
+          <input name="next" type="hidden" value="">
+          <select class="custom-select custom-select-sm" name="language" onchange='if(this.value !=  "en") { this.form.submit(); }'>
+            
+            
+            
+            
+              <option value="fr" >
+                fr
+              </option>
+            
+              <option value="en" selected>
+                en
+              </option>
+            
+          </select>
+        </form>
+
+      </div>
+    </nav>
+
+    <br>
+
+    <div class="container-fluid">
+      
+
+
+
+
+    
+    <div class="alert bg-light" role="alert">
+        <div class="row">
+            <div class="col col-md-2 cold-sm-3">
+                
+                    <div class="alert alert-warning text-center">
+                
+                    <p class="h1"><b>2</b></p>
+                    <h6>trackers</h6>
+                </div>
+                
+                    <div class="alert alert-danger text-center">
+                
+                    <p class="h1"><b>5</b></p>
+                    <h6>permissions</h6>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="alert-heading">
+                    
+                        <h2><img src="/reports/7737/icon" class="rounded" width="60px" alt=""> <b>Universal Copy</b></h2>
+                    
+
+                    <ul class="list-unstyled">
+                        
+                            <li>Version: <b>2.3.3</b></li>
+                        
+                        
+                            <li>Creator: <b>Camel Corporation</b></li>
+                        
+                        
+                            <li>Downloads: <b>1,000,000+ downloads</b></li>
+                        
+                    </ul>
+                    <a class="btn btn-secondary btn-sm" href="/reports/search/com.camel.corp.universalcopy">Other versions</a>
+                    <a class="btn btn-secondary btn-sm" target="_blank" href="https://play.google.com/store/apps/details?id=com.camel.corp.universalcopy">On Google Play</a>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary btn-sm dropdown-toggle"  type="button" id="dropdownApkFingerprint" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">APK fingerprint</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownApkFingerprint">
+                            <a class="dropdown-item" data-toggle="modal" href="#collapseAPKDetails" aria-expanded="false" aria-controls="collapseAPKDetails">Text</a>
+                            <a class="dropdown-item" data-toggle="modal" href="#collapseAPKDetailsJSON" aria-expanded="false" aria-controls="collapseAPKDetailsJSON">JSON</a>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="collapseAPKDetails" tabindex="-1" role="dialog" aria-labelledby="collapseAPKDetails" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">APK fingerprint</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="list-unstyled">
+                                        <li><b>APK checksum:</b> <samp>3b9cbe43a890599d165dcbf239b701ed2c303b56c8d6806ec33a6b57c2ae91ef</samp></li>
+                                        <li><b>Handle:</b> <samp>com.camel.corp.universalcopy</samp></li>
+                                        <li><b>Name:</b> <samp>Universal Copy</samp></li>
+                                        <li><b>UAID:</b> <samp>939B8F01AE3B834B353F73072163B09204836BF5</samp></li>
+                                        <li><b>Version:</b> <samp>2.3.3</samp></li>
+                                        <li><b>Version code:</b> <samp>32</samp></li>
+                                        <li><b>Icon hash:</b> <samp>151265047924103016288602401552147365512</samp></li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="collapseAPKDetailsJSON" tabindex="-1" role="dialog" aria-labelledby="collapseAPKDetailsJSON" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">APK fingerprint</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <pre><code>{
+  &quot;version_code&quot;: &quot;32&quot;,
+  &quot;version&quot;: &quot;2.3.3&quot;,
+  &quot;sha256sum&quot;: &quot;3b9cbe43a890599d165dcbf239b701ed2c303b56c8d6806ec33a6b57c2ae91ef&quot;,
+  &quot;handle&quot;: &quot;com.camel.corp.universalcopy&quot;,
+  &quot;icon_hash&quot;: &quot;151265047924103016288602401552147365512&quot;,
+  &quot;name&quot;: &quot;Universal Copy&quot;,
+  &quot;uaid&quot;: &quot;939B8F01AE3B834B353F73072163B09204836BF5&quot;
+}</code></pre>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p></p>
+                <p class="text-muted small">
+                    This report was automatically issued on <b>April 24, 2018, 2:42 p.m.</b>.<br>
+                    This report was automatically updated on <b>Aug. 20, 2019, 8:03 p.m.</b>.
+                </p>
+
+            </div>
+
+            <div class="col">
+                <div class="alert-heading">
+                    <h4>
+                        🔏 Signed by:
+                    </h4>
+                </div>
+                
+                    <ul class="list-unstyled">
+                        
+                            <li><b>Fingerprint:</b> <code>d23e351f4452810b1f14b7f0b988a6a095350515</code></li>
+                            <li><b>Issuer:</b> <samp>organizationName=Camel Corporation</samp></li>
+                            <li><b>Subject:</b> <samp>organizationName=Camel Corporation</samp></li>
+                            <li><b>Serial:</b> <samp>122063965</samp></li>
+                        
+                    </ul>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-3">
+            <div class="card bg-light">
+                <div class="card-header">
+                    <h4 class=""><span class="badge badge-secondary">2</span> Trackers</h4>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        We have found <b>code signature</b> of the following trackers in the application:
+                        
+                        <br>
+                        <br>
+                        <ul>
+                            
+                                <li><a href="/en/trackers/48/"><samp>Google Analytics</samp></a></li>
+                            
+                                <li><a href="/en/trackers/27/"><samp>Google CrashLytics</samp></a></li>
+                            
+                        </ul>
+                        <p  class="small alert">
+                            <i>A tracker is a piece of software meant to collect data about you or your usages. We do not guarantee the exhaustiveness of this list.</i>
+                        </p>
+                        <p class="alert alert-warning small">
+                            Here is the list of trackers signatures found by static analysis in this APK. This is not a proof of activity of these trackers.
+                            The application could contain tracker(s) we do not know yet.
+                            <br>
+                            If you have doubts about this report, contact us at
+                            <a href="mailto:contact@exodus-privacy.eu.org?subject=Exodus - Question about report 7738">contact@exodus-privacy.eu.org</a>.
+                        </p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-light">
+                <div class="card-header">
+                    <h4 class=""><span class="badge badge-secondary">5</span> Permissions </h4>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        We have found the following permissions in the application:
+                        
+
+                        
+                        <br>
+                        <br>
+			<div class="table-responsive">
+                        <table class="table table-sm">
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to view
+      information about network connections such as which networks exist and are
+      connected.">ACCESS_NETWORK_STATE (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>view network connections</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal|instant">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">BIND_ACCESSIBILITY_SERVICE (android.permission)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: signature">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to create
+     network sockets and use custom network protocols. The browser and other
+     applications provide means to send data to the internet, so this
+     permission is not required to send data to the internet.">INTERNET (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>have full network access</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal|instant">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="Allows the app to prevent the phone from going to sleep.">WAKE_LOCK (android.permission)</samp>
+                                        
+                                            <small class="text-capitalize" style="display:block"><i>prevent phone from sleeping</i></small>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: normal|instant">Normal</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                                <tr class="permission_line">
+                                    <td>
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        <samp data-toggle="tooltip" data-placement="top" title="">BILLING (com.android.vending)</samp>
+                                        
+                                    </td>
+                                    <td class="text-center">
+                                        
+                                            <a href="#" class="badge badge-pill badge-light" data-toggle="tooltip" data-placement="top" title="Protection level: Unknown">Unknown</a>
+                                        
+                                    </td>
+                                </tr>
+                            
+                        </table>
+			</div>
+                        <i class="small">
+                            Permissions are actions the application can do on your phone. The severity levels are defined according to 
+                            <a href="https://developer.android.com/guide/topics/permissions/overview">Google's protection levels</a>.
+                        </i>
+                    
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+    
+    
+  </body>
+</html>
