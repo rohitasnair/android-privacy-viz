@@ -12,11 +12,7 @@ while count < 30000:
     str_count = str(count)
 
     try:
-<<<<<<< HEAD
-        with open('str_count + '.html') as html_file:
-=======
         with open('TRACK_' + str_count + '.html') as html_file:
->>>>>>> f98351b9ef26b3868684e4a1ef7726235628b18c
             soup = BeautifulSoup(html_file, 'lxml')
 
             try:
