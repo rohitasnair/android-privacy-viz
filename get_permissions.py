@@ -12,45 +12,43 @@ while count < 30000:
     str_count = str(count)
 
     try:
-<<<<<<< HEAD
+
         with open('str_count + '.html') as html_file:
-=======
-        with open('TRACK_' + str_count + '.html') as html_file:
->>>>>>> f98351b9ef26b3868684e4a1ef7726235628b18c
-            soup = BeautifulSoup(html_file, 'lxml')
+            with open('TRACK_' + str_count + '.html') as html_file:
+                soup = BeautifulSoup(html_file, 'lxml')
 
-            try:
-                app_name = soup.find('div', class_='alert-heading').h2.b.text
-                print(app_name)
+                try:
+                    app_name = soup.find('div', class_='alert-heading').h2.b.text
+                    print(app_name)
 
-                trck_count = soup.find('div', class_='alert alert-warning text-center').p.b.text
-                print(trck_count)
+                    trck_count = soup.find('div', class_='alert alert-warning text-center').p.b.text
+                    print(trck_count)
 
-                trackers = soup.find('div', class_='card-body').ul.text
-                print(trackers)
+                    trackers = soup.find('div', class_='card-body').ul.text
+                    print(trackers)
 
-                perm_count = soup.find('div', class_='alert alert-danger text-center').p.b.text
-                print(perm_count)
+                    perm_count = soup.find('div', class_='alert alert-danger text-center').p.b.text
+                    print(perm_count)
 
-                for permissions in soup.find_all('tr', class_='permission_line'):
-                    permission = permissions.samp.text
-                    print(permission)
+                    for permissions in soup.find_all('tr', class_='permission_line'):
+                        permission = permissions.samp.text
+                        print(permission)
 
 
-                permissions = soup.find('table', class_='table table-sm').samp.text
-                print(permissions)
-                print('\n\n\n')
+                    permissions = soup.find('table', class_='table table-sm').samp.text
+                    print(permissions)
+                    print('\n\n\n')
 
-                count = count + 1
+                    count = count + 1
 
-            except Exception as e:
-                trackers = None
-                print(trackers)
+                except Exception as e:
+                    trackers = None
+                    print(trackers)
 
-                permissions = None
-                print(permissions)
+                    permissions = None
+                    print(permissions)
 
-                count = count + 1
+                    count = count + 1
 
 
     except Exception as e:
