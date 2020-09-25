@@ -18,6 +18,8 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 ## Code of Conduct
 
+===
+
 ### Our Pledge
 
 In the interest of fostering an open and welcoming environment, we as
@@ -91,3 +93,5 @@ Further details of specific enforcement policies may be posted separately.
 Project maintainers who do not follow or enforce the Code of Conduct in good
 faith may face temporary or permanent repercussions as determined by other
 members of the project's leadership.
+
+
